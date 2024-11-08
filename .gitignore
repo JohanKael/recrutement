@@ -1,0 +1,15 @@
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+
+# CodeIgniter 3
+application/config/*.php
+!application/config/config.php        # Inclut le fichier principal de config
+!application/config/database.php      # Inclut le fichier de configuration de la base de données
+
+# Cache et sessions
+application/cache/*
+!application/cache/index.html         # Garde le fichier index.html par défaut
+application/logs/*
+!application/logs/index.html          # Garde le fichier index.html par défaut
+
