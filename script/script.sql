@@ -1,7 +1,7 @@
 -- Table departements
 CREATE SEQUENCE seq_departements START WITH 1 INCREMENT BY 1;
 CREATE TABLE departements (
-   id_departement VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_departements')::text, 50, '0'),
+   id_departement VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_departements')::text, 5, '0'),
    nom_departement VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_departement)
 );
@@ -9,7 +9,7 @@ CREATE TABLE departements (
 -- Table categorieEmploie
 CREATE SEQUENCE seq_categorieEmploie START WITH 1 INCREMENT BY 1;
 CREATE TABLE categorieEmploie (
-   id_categorieemploie VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_categorieEmploie')::text, 50, '0'),
+   id_categorieemploie VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_categorieEmploie')::text, 5, '0'),
    nom_categorieemploie VARCHAR(250) NOT NULL,
    PRIMARY KEY(id_categorieemploie),
    UNIQUE(nom_categorieemploie)
@@ -18,7 +18,7 @@ CREATE TABLE categorieEmploie (
 -- Table sousCategorie
 CREATE SEQUENCE seq_sousCategorie START WITH 1 INCREMENT BY 1;
 CREATE TABLE sousCategorie (
-   id_sousCategorie VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_sousCategorie')::text, 50, '0'),
+   id_sousCategorie VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_sousCategorie')::text, 5, '0'),
    nom_sousCategorie VARCHAR(50) NOT NULL,
    id_categorieemploie VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_sousCategorie),
@@ -28,7 +28,7 @@ CREATE TABLE sousCategorie (
 -- Table poste
 CREATE SEQUENCE seq_poste START WITH 1 INCREMENT BY 1;
 CREATE TABLE poste (
-   id_poste VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_poste')::text, 50, '0'),
+   id_poste VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_poste')::text, 5, '0'),
    intitule VARCHAR(300) NOT NULL,
    competence VARCHAR(300) NOT NULL,
    conditiontravail VARCHAR(400) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE poste (
 -- Table devise
 CREATE SEQUENCE seq_devise START WITH 1 INCREMENT BY 1;
 CREATE TABLE devise (
-   id_devise VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_devise')::text, 50, '0'),
+   id_devise VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_devise')::text, 5, '0'),
    nom_devise VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_devise)
 );
@@ -53,7 +53,7 @@ CREATE TABLE devise (
 -- Table change
 CREATE SEQUENCE seq_change START WITH 1 INCREMENT BY 1;
 CREATE TABLE change (
-   id_change VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_change')::text, 50, '0'),
+   id_change VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_change')::text, 5, '0'),
    ariary DECIMAL(15,2) NOT NULL,
    valeur_change DECIMAL(15,2) NOT NULL,
    id_devise VARCHAR(50) NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE change (
 -- Table Profil
 CREATE SEQUENCE seq_profil START WITH 1 INCREMENT BY 1;
 CREATE TABLE Profil (
-   id_profil VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_profil')::text, 50, '0'),
+   id_profil VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_profil')::text, 5, '0'),
    experience_min INT NOT NULL,
    experience_max INT NOT NULL,
    id_poste VARCHAR(50) NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE Profil (
 -- Table Diplome
 CREATE SEQUENCE seq_diplome START WITH 1 INCREMENT BY 1;
 CREATE TABLE Diplome (
-   id_diplome VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_diplome')::text, 50, '0'),
+   id_diplome VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_diplome')::text, 5, '0'),
    nom_diplome VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_diplome)
 );
@@ -84,7 +84,7 @@ CREATE TABLE Diplome (
 -- Table detailProfil
 CREATE SEQUENCE seq_detailProfil START WITH 1 INCREMENT BY 1;
 CREATE TABLE detailProfil (
-   id_detailProfil VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_detailProfil')::text, 50, '0'),
+   id_detailProfil VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_detailProfil')::text, 5, '0'),
    id_diplome VARCHAR(50) NOT NULL,
    id_profil VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_detailProfil),
@@ -95,7 +95,7 @@ CREATE TABLE detailProfil (
 -- Table besoinGlobal
 CREATE SEQUENCE seq_besoinGlobal START WITH 1 INCREMENT BY 1;
 CREATE TABLE besoinGlobal (
-   id_besoinGlobal VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_besoinGlobal')::text, 50, '0'),
+   id_besoinGlobal VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_besoinGlobal')::text, 5, '0'),
    date_validtion VARCHAR(50),
    quantite_total VARCHAR(50),
    id_profil VARCHAR(50) NOT NULL,
@@ -106,7 +106,7 @@ CREATE TABLE besoinGlobal (
 -- Table Fournisseur
 CREATE SEQUENCE seq_fournisseur START WITH 1 INCREMENT BY 1;
 CREATE TABLE Fournisseur (
-   id_fournisseur VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_fournisseur')::text, 50, '0'),
+   id_fournisseur VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_fournisseur')::text, 5, '0'),
    adresse VARCHAR(500) NOT NULL,
    nom VARCHAR(500) NOT NULL,
    nom_entreprise VARCHAR(500) NOT NULL,
@@ -119,7 +119,7 @@ CREATE TABLE Fournisseur (
 -- Table DemandeProforma
 CREATE SEQUENCE seq_demandeProforma START WITH 1 INCREMENT BY 1;
 CREATE TABLE DemandeProforma (
-   id_demandeProforma VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_demandeProforma')::text, 50, '0'),
+   id_demandeProforma VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_demandeProforma')::text, 5, '0'),
    DateDemande_proforma DATE NOT NULL,
    PRIMARY KEY(id_demandeProforma)
 );
@@ -127,7 +127,7 @@ CREATE TABLE DemandeProforma (
 -- Table BonCommande
 CREATE SEQUENCE seq_bonCommande START WITH 1 INCREMENT BY 1;
 CREATE TABLE BonCommande (
-   idBonCommande VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_bonCommande')::text, 50, '0'),
+   idBonCommande VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_bonCommande')::text, 5, '0'),
    date_bonCommande DATE NOT NULL,
    PRIMARY KEY(idBonCommande)
 );
@@ -135,7 +135,7 @@ CREATE TABLE BonCommande (
 -- Table users
 CREATE SEQUENCE seq_users START WITH 1 INCREMENT BY 1;
 CREATE TABLE users (
-   id_users VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_users')::text, 50, '0'),
+   id_users VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_users')::text, 5, '0'),
    email_user VARCHAR(100) NOT NULL,
    password_user VARCHAR(200) NOT NULL,
    id_poste VARCHAR(50) NOT NULL,
@@ -148,7 +148,7 @@ CREATE TABLE users (
 -- Table besoinProfil
 CREATE SEQUENCE seq_besoinProfil START WITH 1 INCREMENT BY 1;
 CREATE TABLE besoinProfil (
-   id_besoinProfil VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_besoinProfil')::text, 50, '0'),
+   id_besoinProfil VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_besoinProfil')::text, 5, '0'),
    date_demande DATE,
    quantite VARCHAR(50),
    id_profil VARCHAR(50) NOT NULL,
@@ -162,7 +162,7 @@ CREATE TABLE besoinProfil (
 -- Table besoinChecked
 CREATE SEQUENCE seq_besoinChecked START WITH 1 INCREMENT BY 1;
 CREATE TABLE besoinChecked (
-   id_besoinChecked VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_besoinChecked')::text, 50, '0'),
+   id_besoinChecked VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_besoinChecked')::text, 5, '0'),
    dateChecck DATE NOT NULL,
    id_besoinProfil VARCHAR(50) NOT NULL,
    id_besoinGlobal VARCHAR(50) NOT NULL,
@@ -175,7 +175,7 @@ CREATE TABLE besoinChecked (
 -- Table Proforma
 CREATE SEQUENCE seq_proforma START WITH 1 INCREMENT BY 1;
 CREATE TABLE Proforma (
-   id_proforma VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_proforma')::text, 50, '0'),
+   id_proforma VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_proforma')::text, 5, '0'),
    date_emission DATE NOT NULL,
    date_expiration DATE NOT NULL,
    total DECIMAL(15,2) NOT NULL,
@@ -190,6 +190,6 @@ CREATE TABLE Proforma (
 -- Table DetailProforma
 CREATE SEQUENCE seq_detailProforma START WITH 1 INCREMENT BY 1;
 CREATE TABLE DetailProforma (
-   id_detailProforma VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_detailProforma')::text, 50, '0'),
+   id_detailProforma VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_detailProforma')::text, 5, '0'),
    quantite INT,
    pu VARCHAR

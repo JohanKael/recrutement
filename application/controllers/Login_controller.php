@@ -18,12 +18,13 @@ class Login_controller extends CI_Controller {
         $password = $this->input->post('password');
         //echo $email . ' ' . $password;
         $conditions = [
-            '' => $email,
-            '' => $password 
+            'email_user' => $email,
+            'password_user' => $password 
         ];
-        $checkLogin = $this->dao->select_where("", $conditions);
+        $checkLogin = $this->dao->select_where("users", $conditions);
         if($checkLogin != null){
-
+            $this->session->set_userdata("user_info", $checkLogin[0]);
+            redirect("c_home");
         }else{
             redirect('login_controller');
         }

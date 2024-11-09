@@ -11,7 +11,7 @@
     <form action="<?php echo base_url("login_controller/login") ?>" method="post">
         <h2>Recrutement</h2>
         <input type="text" name="email" id="" placeholder="E-mail">
-        <input type="text" name="password" id="" placeholder="Password">
+        <input type="password" name="password" id="" placeholder="Password">
         <input type="submit" value="Log">
     </form>
 
