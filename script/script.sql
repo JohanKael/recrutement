@@ -24,7 +24,7 @@ CREATE TABLE sousCategorie (
    PRIMARY KEY(id_sousCategorie),
    FOREIGN KEY(id_categorieemploie) REFERENCES categorieEmploie(id_categorieemploie)
 );
-
+   
 -- Table poste
 CREATE SEQUENCE seq_poste START WITH 1 INCREMENT BY 1;
 CREATE TABLE poste (
