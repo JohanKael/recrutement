@@ -7,6 +7,36 @@ class Dao_model extends CI_Model{
         $this->load->database();
     }
 
+/* FONCTION POUR CRAFT LA PRIMARY KEY AVEC UNE SEQUENCE
+     @params : 
+        - $nom_sequence : nom de la sequence 
+        - $prefixe : prefixe de la primary specifique pour chaque table 
+*/
+     public function primaryKeyWithSequence($nom_sequence, $prefixe){
+        $sequence = $this->dao->sequence($nom_sequence);        //valeur de la nextval de la sequence
+        $tailleSequenceString = strlen(strval($sequence));      //taille de la sequence
+        $primaryKey = "vide";
+        if ($tailleSequenceString == 1) { $primaryKey = $prefixe."00000".$sequence; }
+        else if ($tailleSequenceString == 2) { $primaryKey = $prefixe."0000".$sequence; }
+        else if ($tailleSequenceString == 3) { $primaryKey = $prefixe."000".$sequence; }
+        else if ($tailleSequenceString == 4) { $primaryKey = $prefixe."00".$sequence; }
+        else if ($tailleSequenceString == 5) { $primaryKey = $prefixe."0".$sequence; }
+        else if ($tailleSequenceString == 6) { $primaryKey = $prefixe."".$sequence; }
+        return $primaryKey;
+    }
+
+/* FONCTION POUR RECUPERER LA VALEUR D'UNE SEQUENCE
+     @params : nom de la sequence */
+    public function sequence($nom_sequence){
+        $sql = "select nextval('".$nom_sequence."')";
+        $query = $this->db->query($sql);
+
+        if ($query) {
+            $tab_sequence = $query->result_array();
+            return $tab_sequence[0]['nextval'];
+        }
+        return false;
+    }
 
 
     // fonction qui select tout dans une table
@@ -43,11 +73,35 @@ class Dao_model extends CI_Model{
         if ($this->db->insert($nom_table, $data_to_insert)) {
             return $this->db->insert_id();
         }
-        return null;
+        return false;
     }
 
 
-
+    public function saveData($nom_table, $data_to_insert, $columnId) {
+        // Insérer les données
+        if ($this->db->insert($nom_table, $data_to_insert)) {
+            // Récupérer la dernière ligne insérée en utilisant les mêmes valeurs que dans l'insertion
+            $this->db->select($columnId); // Remplacez `id` par le nom de votre colonne d'ID
+            $this->db->from($nom_table);
+    
+            // Appliquer les conditions pour les valeurs uniques de `$data_to_insert`
+            foreach ($data_to_insert as $column => $value) {
+                $this->db->where($column, $value);
+            }
+    
+            // Trier par ID dans l'ordre décroissant et limiter à un seul résultat
+            $this->db->order_by($columnId, 'DESC'); // Assurez-vous que `id` est bien le nom de la colonne ID
+            $this->db->limit(1);
+    
+            $query = $this->db->get();
+    
+            if ($query->num_rows() > 0) {
+                return $query->row()->$columnId; // Remplacez `id` par le nom de votre colonne d'ID
+            }
+        }
+        return false;
+    }
+    
 
 
     // fonction qui update une ligne d'une table

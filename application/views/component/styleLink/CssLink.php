@@ -1,0 +1,10 @@
+        <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/StylePrecious.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Notification.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Dropdown.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Pagination.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/PopupResetBase.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/PopupValidation.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/PopupAccount.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/PopupEntree.css'); ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/AchatMatiere.css'); ?>">
