@@ -57,9 +57,9 @@ class C_Categorie extends CI_Controller {
     }
 
 /* FONCTION POUR VERIFIER SI LE NOM DE SOUS CATEGORIE N'EST PAS VIDE */
-    public function checkChampVide($) {
+    // public function checkChampVide($) {
 
-    }
+    // }
 
 /* FONCTION POUR AVOIR LA LISTE DES CATEGORIES DES MATERIELS */
     public function getListeCategorie(){

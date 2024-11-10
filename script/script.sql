@@ -209,13 +209,16 @@ CREATE TABLE Proforma (
    FOREIGN KEY(id_demandeProforma) REFERENCES DemandeProforma(id_demandeProforma)
 );
 
-<<<<<<< HEAD
+CREATE TABLE pdf_files (
+   id SERIAL PRIMARY KEY,
+   title VARCHAR(255) NOT NULL,
+   pdf_content BYTEA,
+   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-=======
 -- Table DetailProforma
-CREATE SEQUENCE seq_detailProforma START WITH 1 INCREMENT BY 1;
-CREATE TABLE DetailProforma (
-   id_detailProforma VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_detailProforma')::text, 6, '0'),
-   quantite INT,
-   pu VARCHAR
->>>>>>> 393e2d6f4509c997410ca7738b1740985cccd510
+-- CREATE SEQUENCE seq_detailProforma START WITH 1 INCREMENT BY 1;
+-- CREATE TABLE DetailProforma (
+--    id_detailProforma VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_detailProforma')::text, 6, '0'),
+--    quantite INT,
+--    pu VARCHAR

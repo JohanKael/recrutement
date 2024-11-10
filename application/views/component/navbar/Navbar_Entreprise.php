@@ -99,6 +99,29 @@
                         </div>
                     </a>
                 </div>
+
+            <div class="boutonnavbar" id="facture" data-dropdown="dropdownMenucv">
+                <span class="glyphicon glyphicon-folder-open icon" aria-hidden="true"></span>
+                <span class="link-text">Curriculum Vitae</span>
+                <span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
+            </div>  
+                <div id="dropdownMenucv" class="dropdown-content">
+                    <a href="<?php echo base_url('index.php/cv/C_CurriculumVitae/page_AjoutCv/3')?>">
+                        <div class="boutonnavbar">
+                            <span class="glyphicon glyphicon-home icon" aria-hidden="true"></span>
+                            <span class="link-text">Ajout CV</span>
+                        </div>
+                    </a>
+
+                    <a href="<?php echo base_url('index.php/cv/C_CurriculumVitae/showCvListe/3')?>">
+                        <div class="boutonnavbar">
+                            <span class="glyphicon glyphicon-home icon" aria-hidden="true"></span>
+                            <span class="link-text">Liste CV</span>
+                        </div>
+                    </a>
+                </div>
+
+            
                 
         </div>
     </div>
