@@ -1,13 +1,13 @@
     <div class="col-md-1 url">
         <div class="logodiv"><img class="logo" src="<?php echo base_url('assets/image/logo.jpg'); ?>"></div>
         <div class="scroll-container">
-            <a href="<?php echo base_url('login_controller/disconnect')?>">
+            <a href="<?php echo base_url('index.php/login_controller/disconnect')?>">
                 <div class="boutonnavbar">
                     <span class="glyphicon glyphicon-th-large icon" aria-hidden="true"></span>
                     <span class="link-text">Log Out</span>
                 </div>
             </a>
-            <a href="<?php echo base_url('C_Home')?>">
+            <a href="<?php echo base_url('index.php/C_Home')?>">
                 <div class="boutonnavbar">
                     <span class="glyphicon glyphicon-home icon" aria-hidden="true"></span>
                     <span class="link-text">Home</span>
@@ -20,13 +20,13 @@
                 <span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
             </div>
                 <div id="dropdownMenubesoin" class="dropdown-content">
-                    <a href="<?php echo base_url('besoin/C_Besoin/page_AjoutBesoin/3')?>">
+                    <a href="<?php echo base_url('index.php/besoin/C_Besoin/page_AjoutBesoin/3')?>">
                         <div class="boutonnavbar">
                             <span class="glyphicon glyphicon-plus-sign icon" aria-hidden="true"></span>
                             <span class="link-text">Ajout</span>
                         </div>
                     </a>
-                    <a href="<?php echo base_url('besoin/C_Besoin/liste_besoins/3')?>">
+                    <a href="<?php echo base_url('index.php/besoin/C_Besoin/liste_besoins/3')?>">
                         <div class="boutonnavbar">
                             <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
                             <span class="link-text">Liste</span>
@@ -40,13 +40,13 @@
                 <span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
             </div>
                 <div id="dropdownMenucategorie" class="dropdown-content">
-                    <a href="<?php echo base_url('materiel/C_Categorie/page_AjoutCategorieMateriel/3')?>">
+                    <a href="<?php echo base_url('index.php/materiel/C_Categorie/page_AjoutCategorieMateriel/3')?>">
                         <div class="boutonnavbar">
                             <span class="glyphicon glyphicon-plus-sign icon" aria-hidden="true"></span>
                             <span class="link-text">Ajout</span>
                         </div>
                     </a>
-                    <a href="<?php echo base_url('materiel/C_Categorie/getListeCategorie')?>">
+                    <a href="<?php echo base_url('index.php/materiel/C_Categorie/getListeCategorie')?>">
                         <div class="boutonnavbar">
                             <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
                             <span class="link-text">Liste</span>
@@ -60,13 +60,13 @@
                 <span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
             </div>
                 <div id="dropdownMenumateriel" class="dropdown-content">
-                    <a href="<?php echo base_url('materiel/C_Materiel/page_AjoutMateriel/3')?>">
+                    <a href="<?php echo base_url('index.php/materiel/C_Materiel/page_AjoutMateriel/3')?>">
                         <div class="boutonnavbar">
                             <span class="glyphicon glyphicon-plus-sign icon" aria-hidden="true"></span>
                             <span class="link-text">Ajout</span>
                         </div>
                     </a>
-                    <a href="<?php echo base_url('materiel/C_Materiel/getListeMateriel')?>">
+                    <a href="<?php echo base_url('index.php/materiel/C_Materiel/getListeMateriel')?>">
                         <div class="boutonnavbar">
                             <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
                             <span class="link-text">Liste</span>
@@ -80,13 +80,13 @@
                 <span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
             </div>  
                 <div id="dropdownMenufacture" class="dropdown-content">
-                    <a href="<?php echo base_url('proforma/C_Proforma/page_rechercheProforma/3')?>">
+                    <a href="<?php echo base_url('index.php/proforma/C_Proforma/page_rechercheProforma/3')?>">
                         <div class="boutonnavbar">
                             <span class="glyphicon glyphicon-open-file icon" aria-hidden="true"></span>
                             <span class="link-text">Liste Profoma</span>
                         </div>
                     </a>
-                    <a href="<?php echo base_url('proforma/C_Proforma/page_ListBesoinSansDemandeProforma/3')?>">
+                    <a href="<?php echo base_url('index.php/proforma/C_Proforma/page_ListBesoinSansDemandeProforma/3')?>">
                         <div class="boutonnavbar">
                             <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
                             <span class="link-text">Liste Besoin</span>

@@ -1,25 +1,32 @@
 <div class="col-md-1 url">
         <div class="logodiv"><img class="logo" src="<?php echo base_url('assets/image/logo.jpg'); ?>"></div>
         <div class="scroll-container">
-            <a href="<?php echo base_url('login_controller/disconnect')?>">
+            <a href="<?php echo base_url('index.php/login_controller/disconnect')?>">
                 <div class="boutonnavbar">
                     <span class="glyphicon glyphicon-th-large icon" aria-hidden="true"></span>
                     <span class="link-text">Log Out</span>
                 </div>
             </a>
-            <a href="<?php echo base_url('C_Home')?>">
+            <a href="<?php echo base_url('index.php/C_Home')?>">
                 <div class="boutonnavbar">
                     <span class="glyphicon glyphicon-home icon" aria-hidden="true"></span>
                     <span class="link-text">Home</span>
                 </div>
             </a>
-            <a href="<?php echo base_url('proforma/C_ProformaFournisseur/page_ListDemandeProformaFournisseur/3')?>">
+            <a href="<?php echo base_url('index.php/proforma/C_ProformaFournisseur/page_ListDemandeProformaFournisseur/3')?>">
                 <div class="boutonnxavbar">
                     <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
                     <span class="link-text">Demande Proforma</span>
                 </div>
             </a>
-            <a href="<?php echo base_url('proforma/C_ProformaFournisseur/page_ListDemandeProformaFournisseur/3')?>">
+            <a href="<?php echo base_url('index.php/proforma/C_ProformaFournisseur/page_ListDemandeProformaFournisseur/3')?>">
+                <div class="boutonnavbar">
+                    <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
+                    <span class="link-text">Bon Commande</span>
+                </div>
+            </a>
+
+            <a href="<?php echo base_url('index.php/proforma/C_ProformaFournisseur/page_ListDemandeProformaFournisseur/3')?>">
                 <div class="boutonnavbar">
                     <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
                     <span class="link-text">Bon Commande</span>

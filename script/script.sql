@@ -1,3 +1,6 @@
+CREATE DATABASE recrutement;
+\c recrutement;
+
 -- Table departements
 CREATE SEQUENCE seq_departements START WITH 1 INCREMENT BY 1;
 CREATE TABLE departements (
@@ -187,9 +190,4 @@ CREATE TABLE Proforma (
    FOREIGN KEY(id_demandeProforma) REFERENCES DemandeProforma(id_demandeProforma)
 );
 
--- Table DetailProforma
-CREATE SEQUENCE seq_detailProforma START WITH 1 INCREMENT BY 1;
-CREATE TABLE DetailProforma (
-   id_detailProforma VARCHAR(50) DEFAULT LPAD(NEXTVAL('seq_detailProforma')::text, 50, '0'),
-   quantite INT,
-   pu VARCHAR
+
