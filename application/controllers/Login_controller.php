@@ -36,24 +36,16 @@ class Login_controller extends CI_Controller {
     /*public function login(){
         echo "ato";
         $email = $this->input->post('email');
-        $pwd = $this->input->post('password');
-
-        $login = [
-            'email_user' => $email, 
-            'password_user' => $pwd
+        $password = $this->input->post('password');
+        //echo $email . ' ' . $password;
+        $conditions = [
+            'email_user' => $email,
+            'password_user' => $password 
         ];
-
-        $result = $this->dao->select_where('users', $login);
-        $entreprise_info = [
-            'nom_entreprise' => "SMARTIES",
-            'adresse_entreprise' => "Tokyo",
-            'num_entreprise' => "020 14 698 03",
-            'email_entreprise' => "smarties@gmail.com"
-        ];
-        $this->session->set_userdata('entreprise_info', $entreprise_info);
-        if($result != null){
-            $this->session->set_userdata('user_info', $result[0]);
-            redirect('C_Home');
+        $checkLogin = $this->dao->select_where("users", $conditions);
+        if($checkLogin != null){
+            $this->session->set_userdata("user_info", $checkLogin[0]);
+            redirect("C_Home");
         }else{
             redirect('login_controller');
         }

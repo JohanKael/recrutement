@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 juil. 2024, 15:35:35
+    Author     : ETU1886-Fanirina
+*/
+
+.pagination-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    margin-top: 20px;
+    margin-left: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 42.5px;
+}
+
+.paginationselect {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.selectpage {
+    padding: 4px 10px;
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 8px;
+    background-color: #FFF;
+    margin-left: -70px;
+}
+
+.skipbutton {
+    border: 2px solid rgb(179, 179, 179);
+    border-radius: 8px;
+    background-color: #FFF;
+    width: 50px;
+    height: 40px;
+    padding-top: 4.5px;
+    padding-left: 8px;
+}
+
+.skipbutton:hover {
+    border: 2px solid rgb(0 19 38 / 25%);
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(0, 132, 255);
+    width: 50px;
+    height: 40px;
+    padding-top: 4.5px;
+    padding-left: 8px;
+    transition: 0.4s;
+}
+
+.number {
+    border: 2px solid rgb(179, 179, 179);
+    border-radius: 8px;
+    background-color: #FFF;
+    width: 50px;
+    height: 40px;
+    padding-top: 9.5px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.ligne {
+    background-color: rgb(244, 244, 244);
+    color: #343434;
+}
+
+.ligne:hover {
+    background-color: rgb(94 158 240);
+    color: white;
+    transition: 0.2s;
+}
+
+table{
+    box-shadow: 0 0 5px rgb(222, 222, 222);
+}

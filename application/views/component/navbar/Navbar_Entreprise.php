@@ -29,11 +29,37 @@
                     <a href="<?php echo base_url('index.php/besoin/C_Besoin/liste_besoins/3')?>">
                         <div class="boutonnavbar">
                             <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
+                            <span class="link-text">Liste Non Valide</span>
+                        </div>
+                    </a>
+                    <a href="<?php echo base_url('besoin/C_Besoin/liste_besoinValide/3')?>">
+                        <div class="boutonnavbar">
+                            <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
+                            <span class="link-text">Liste Valide</span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="boutonnavbar" id="profil" data-dropdown="dropdownMenuprofil">
+                <span class="glyphicon glyphicon-user icon" aria-hidden="true"></span>
+                <span class="link-text">Profil</span>
+                <span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
+            </div>
+                <div id="dropdownMenuprofil" class="dropdown-content">
+                    <a href="<?php echo base_url('materiel/C_Materiel/page_AjoutMateriel/3')?>">
+                        <div class="boutonnavbar">
+                            <span class="glyphicon glyphicon-plus-sign icon" aria-hidden="true"></span>
+                            <span class="link-text">Ajout</span>
+                        </div>
+                    </a>
+                    <a href="<?php echo base_url('materiel/C_Materiel/getListeMateriel')?>">
+                        <div class="boutonnavbar">
+                            <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
                             <span class="link-text">Liste</span>
                         </div>
                     </a>
                 </div>
-            
+
             <div class="boutonnavbar" id="categorie" data-dropdown="dropdownMenucategorie">
                 <span class="glyphicon glyphicon-list-alt icon" aria-hidden="true"></span>
                 <span class="link-text">Catégorie Matériel</span>
@@ -47,26 +73,6 @@
                         </div>
                     </a>
                     <a href="<?php echo base_url('index.php/materiel/C_Categorie/getListeCategorie')?>">
-                        <div class="boutonnavbar">
-                            <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
-                            <span class="link-text">Liste</span>
-                        </div>
-                    </a>
-                </div>
-            
-            <div class="boutonnavbar" id="materiel" data-dropdown="dropdownMenumateriel">
-                <span class="glyphicon glyphicon-print icon" aria-hidden="true"></span>
-                <span class="link-text">Matériel</span>
-                <span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
-            </div>
-                <div id="dropdownMenumateriel" class="dropdown-content">
-                    <a href="<?php echo base_url('index.php/materiel/C_Materiel/page_AjoutMateriel/3')?>">
-                        <div class="boutonnavbar">
-                            <span class="glyphicon glyphicon-plus-sign icon" aria-hidden="true"></span>
-                            <span class="link-text">Ajout</span>
-                        </div>
-                    </a>
-                    <a href="<?php echo base_url('index.php/materiel/C_Materiel/getListeMateriel')?>">
                         <div class="boutonnavbar">
                             <span class="glyphicon glyphicon-list icon" aria-hidden="true"></span>
                             <span class="link-text">Liste</span>
