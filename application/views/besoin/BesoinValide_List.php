@@ -1,4 +1,4 @@
-    <style>
+<style>
         .table {
             margin-top: 2.5%;
         }
@@ -9,14 +9,16 @@
             <tr>
                 <th>N° Demande Talent</th>
                 <th>Date Demande</th>
+                <th>Date Validation</th>
                 <th>Poste</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($liste_talent as $talent) { ?>
-                <tr class="ligne" data-href="<?php echo base_url('besoin/C_Besoin/detail_besoin/'.$talent['id_demandetalent']); ?>">
+                <tr class="ligne" data-href="<?php echo base_url('profil/C_Profil/page_DetailProfilValide/'.$talent['id_demandetalent']); ?>">
                     <td><?php echo $talent['id_demandetalent']; ?></td>
                     <td><?php echo $talent['datedemandetalent']; ?></td>
+                    <td><?php echo $talent['datechecktalent']; ?></td>
                     <td><?php echo $talent['intitule']; ?></td>
                 </tr>
             <?php } ?>

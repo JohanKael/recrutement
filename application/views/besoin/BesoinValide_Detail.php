@@ -1,4 +1,4 @@
-    <style>
+<style>
         .info {
             font-size: 16px;
             display: flex;
@@ -51,7 +51,21 @@
                         <?php $date = new DateTime($talent['datedemandetalent']);
                             echo $date->format('d F Y');
                         ?>
+                    </div>
                 </div>
+                <div class="info">
+                    <div class="data">Date de validation  </div>
+                    <div class="point">................................................</div>
+                    <div class="data">
+                        <?php $date = new DateTime($talent['datechecktalent']);
+                            echo $date->format('d F Y');
+                        ?>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="data">Statut  </div>
+                    <div class="point">................................................</div>
+                    <div class="data">Validé</div>
                 </div>
                 <div class="info">
                     <div class="data">Département  </div>
@@ -80,17 +94,10 @@
                 </div>
             <?php } ?>
             
-            <form action="<?php echo base_url('besoin/C_Besoin/validation_besoin') ?>" method="POST">
-                    <input type="hidden" name="datedemande" class="selectMats" value="<?php echo $talent['datedemandetalent'] ?>">
-                    <input type="hidden" name="demandetalent" class="selectMats" value="<?php echo $detail_talent[0]['id_demandetalent'] ?>">
-                <div class="quantite">
-                    <h4 class="titleMatiere">Date de validation :</h4> 
-                    <input type="date" name="datevalidation" class="selectMats">
-                    <div class="titleMatiere"></div>
-                </div>
-                <div class="submitButton">
-                    <input type="submit" value="VALIDER DEMANDE DE TALENT">
-                </div>
-            </form>
+            <div class="info">
+                <a href="<?php echo base_url('profil/C_Profil/page_DressserProfil/'.$detail_talent[0]['id_demandetalent']) ?>">
+                    <button class="modifier">DRESSER UN PROFIL</button>
+                </a>
+            </div>
         </div>
     </div>

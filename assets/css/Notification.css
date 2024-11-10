@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 juil. 2024, 12:40:15
+    Author     : ETU1886-Fanirina
+*/
+
+.notification{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+    box-shadow: 0 0 10px rgb(222, 222, 222);
+    border: 0.1px solid rgb(222, 222, 222);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.notification:hover{
+/*    border: 0.1px solid rgb(0, 231, 251);
+    box-shadow: 0 0 10px rgb(0, 231, 251);*/
+    color: #FFF;
+    background-color: rgb(0, 132, 255);
+    text-decoration: none;
+}
+
+.notificationicon {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.notificationlink-text {
+    display: inline;
+    width: 100%;
+}
+
+    @media (max-width: 768px) {
+        .notificationlink-text {
+            display: none;
+        }
+        .notificationicon {
+            width: 100%;
+            font-size: 20px;
+        }
+        .notificationbadge {
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+            font-size: 9px;
+            font-weight: bold;
+            margin-top: -40px;
+            margin-right: -10px;
+        }
+    }
+    
+.notificationscroll-container {
+    width: 100%;
+    padding-top: 20px; /* Ajout d'espace entre .logodiv et les éléments défilants */
+    box-sizing: border-box; /* Inclure le padding dans la hauteur totale */
+}
+
+.notificationscroll-container::-webkit-scrollbar {
+    display: none; /* Masquer la barre de défilement */
+}
+
+.notificationlogodiv{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: sticky; /* Permet de fixer l'élément */
+    top: 0; /* Fixe en haut de son parent */
+    width: 100%; /* Largeur maximale */
+    z-index: 2; /* Au-dessus du reste du contenu */
+}
+
+.notificationbadge {
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 0px 0 8px rgb(255 0 0);
+    color: white;
+    margin-top: -40px;
+    width: 26px;
+    height: 18px;
+}

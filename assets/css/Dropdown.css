@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 juil. 2024, 17:53:17
+    Author     : ETU1886-Fanirina
+*/
+.dropdown-content {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    color: black;
+    width: 100%; 
+    z-index: 1;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.dropdown-content.show {    
+    opacity: 1;
+}
+
+.dropdown-content .boutonnavbar {
+    width: 85%;
+    padding: 10px 0;    
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgb(222, 222, 222);
+    border: 0.1px solid rgb(222, 222, 222);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content .boutonnavbar:hover{
+/*    border: 0.1px solid rgb(0, 231, 251);
+    box-shadow: 0 0 10px rgb(0, 231, 251);*/
+    color: #FFF;
+    background-color: rgb(0, 132, 255);
+    text-decoration: none;
+}
+
