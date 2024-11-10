@@ -24,7 +24,7 @@ class Login_controller extends CI_Controller {
         $checkLogin = $this->dao->select_where("users", $conditions);
         if($checkLogin != null){
             $this->session->set_userdata("user_info", $checkLogin[0]);
-            redirect("c_home");
+            redirect("C_Home");
         }else{
             redirect('login_controller');
         }
